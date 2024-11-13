@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Sound Alert</title>
+  <style>
+    /* Basic reset for styling */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Full-screen background */
+    body, html {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #000;
+    }
+
+    /* Dialog box styling */
+    .dialog-box {
+      background-color: #fff;
+      width: 300px;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Text styling */
+    .dialog-box p {
+      font-size: 16px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .dialog-box p.subtext {
+      font-size: 14px;
+      color: #666;
+    }
+
+    /* Button styling */
+    .button-container {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .button {
+      padding: 8px 16px;
+      font-size: 14px;
+      font-weight: bold;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .button.cancel {
+      background-color: #f0f0f0;
+      color: #333;
+    }
+
+    .button.continue {
+      background-color: #1976d2;
+      color: #fff;
+    }
+
+    .button.cancel:hover {
+      background-color: #e0e0e0;
+    }
+
+    .button.continue:hover {
+      background-color: #1565c0;
+    }
+  </style>
+  <script>
+    function loadCancelLink() {
+      window.location.href = 'https://example.com/cancel'; // Replace with your Cancel link
+    }
+
+    function loadContinueLink() {
+      window.location.href = 'https://example.com/continue'; // Replace with your Continue link
+    }
+  </script>
+</head>
+<body>
+  <div class="dialog-box">
+    <p>Video will play with sound.</p>
+    <p class="subtext">Do you wish to continue?</p>
+    <div class="button-container">
+      <button class="button cancel" onclick="loadCancelLink()">Cancel</button>
+      <button class="button continue" onclick="loadContinueLink()">Continue</button>
+    </div>
+  </div>
+</body>
+</html>
